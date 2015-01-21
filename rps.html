@@ -3,9 +3,69 @@
 <head>
 	<title>Rock Paper Scissors</title>
 	<link rel ="stylesheet" style="css" href="rps.css">
-	
+
 </head>
 <body>
+
+  <h1>Rock Paper Scissors</h1>
+    <div id="rockpic">
+      <img src="therock2528212529_crop_exact.jpg">
+    </div>
+
+    <div id="dundermifflin">
+      <img src="29-1t069-officec-300x300.jpg">
+    </div>
+
+    <div id="Scissors">
+      <img src="movie-screencaps-edward-scissorhands-3431378-1024-576.jpg">
+    </div>
+<script>
+
+var userChoice = prompt("ROCK! PAPER! SCISSORS! GO!");
+var computerChoice = Math.random();
+if (computerChoice < 0.34) {
+    computerChoice = "rock";
+} else if(computerChoice <= 0.67) {
+    computerChoice = "paper";
+} else {
+    computerChoice = "scissors";
+} console.log("Computer: " + computerChoice);
+
+var compare = function(choice1, choice2) {
+    if(choice1 === choice2) {
+        alert("DAAAAAMN TIE!")
+    }   
+    
+    else if(choice1 === "rock") {
+        if(choice2 === "scissors") {
+            alert("rock wins!")
+    }
+        else {
+            alert("paper wins!")
+        }
+    }
+    else if(choice1 === "paper") {
+        if(choice2 === "rock") {
+            alert("paper wins!")
+    }
+        else {
+            alert("scissors wins!")
+        }
+    }
+        else if(choice1 === "scissors") {
+            if(choice2 === "paper") {
+            alert("scissors wins!")
+    }
+        else {
+            alert("rock wins!")
+        }
+    }
+    
+}
+
+console.log(compare(userChoice,computerChoice));
+
+</script>
 
 </body>
 </html>
